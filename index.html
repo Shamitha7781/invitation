@@ -18,15 +18,8 @@
       --warm: #fff8dc;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -34,7 +27,6 @@
       overflow-x: hidden;
     }
 
-    /* ─── CANVAS BACKGROUND ─── */
     #bgCanvas {
       position: fixed;
       inset: 0;
@@ -70,9 +62,7 @@
     }
 
     @keyframes mandala-spin {
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .intro-ring {
@@ -82,52 +72,17 @@
       animation: ring-pulse 4s ease-in-out infinite;
     }
 
-    .ring1 {
-      width: 200px;
-      height: 200px;
-      animation-delay: 0s;
-    }
-
-    .ring2 {
-      width: 320px;
-      height: 320px;
-      animation-delay: 0.5s;
-      border-color: rgba(255, 140, 0, 0.15);
-    }
-
-    .ring3 {
-      width: 450px;
-      height: 450px;
-      animation-delay: 1s;
-      border-color: rgba(255, 215, 0, 0.08);
-    }
-
-    .ring4 {
-      width: 600px;
-      height: 600px;
-      animation-delay: 1.5s;
-      border-color: rgba(255, 215, 0, 0.05);
-    }
+    .ring1 { width: 200px; height: 200px; animation-delay: 0s; }
+    .ring2 { width: 320px; height: 320px; animation-delay: 0.5s; border-color: rgba(255, 140, 0, 0.15); }
+    .ring3 { width: 450px; height: 450px; animation-delay: 1s; border-color: rgba(255, 215, 0, 0.08); }
+    .ring4 { width: 600px; height: 600px; animation-delay: 1.5s; border-color: rgba(255, 215, 0, 0.05); }
 
     @keyframes ring-pulse {
-
-      0%,
-      100% {
-        transform: scale(1);
-        opacity: 0.8;
-      }
-
-      50% {
-        transform: scale(1.04);
-        opacity: 0.4;
-      }
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.04); opacity: 0.4; }
     }
 
-    #intro-particles {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
+    #intro-particles { position: absolute; inset: 0; pointer-events: none; }
 
     .spark {
       position: absolute;
@@ -138,20 +93,9 @@
     }
 
     @keyframes spark-rise {
-      0% {
-        opacity: 0;
-        transform: translateY(0) scale(0);
-      }
-
-      20% {
-        opacity: 1;
-        transform: translateY(-30px) scale(1);
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateY(-160px) scale(0.2);
-      }
+      0% { opacity: 0; transform: translateY(0) scale(0); }
+      20% { opacity: 1; transform: translateY(-30px) scale(1); }
+      100% { opacity: 0; transform: translateY(-160px) scale(0.2); }
     }
 
     .diya-wrap {
@@ -169,20 +113,9 @@
     }
 
     @keyframes diya-flicker {
-      0% {
-        filter: drop-shadow(0 0 20px #ff8c00) drop-shadow(0 0 40px rgba(255, 140, 0, 0.3));
-        transform: scale(1) rotate(-1deg);
-      }
-
-      50% {
-        filter: drop-shadow(0 0 35px #ffaa00) drop-shadow(0 0 70px rgba(255, 200, 0, 0.5));
-        transform: scale(1.04) rotate(1deg);
-      }
-
-      100% {
-        filter: drop-shadow(0 0 25px #ff6600) drop-shadow(0 0 50px rgba(255, 100, 0, 0.35));
-        transform: scale(0.98) rotate(0deg);
-      }
+      0% { filter: drop-shadow(0 0 20px #ff8c00) drop-shadow(0 0 40px rgba(255, 140, 0, 0.3)); transform: scale(1) rotate(-1deg); }
+      50% { filter: drop-shadow(0 0 35px #ffaa00) drop-shadow(0 0 70px rgba(255, 200, 0, 0.5)); transform: scale(1.04) rotate(1deg); }
+      100% { filter: drop-shadow(0 0 25px #ff6600) drop-shadow(0 0 50px rgba(255, 100, 0, 0.35)); transform: scale(0.98) rotate(0deg); }
     }
 
     .intro-title-te {
@@ -196,13 +129,8 @@
     }
 
     @keyframes text-glow {
-      from {
-        text-shadow: 0 0 20px var(--gold-glow);
-      }
-
-      to {
-        text-shadow: 0 0 50px var(--gold-glow), 0 0 80px rgba(255, 215, 0, 0.3);
-      }
+      from { text-shadow: 0 0 20px var(--gold-glow); }
+      to { text-shadow: 0 0 50px var(--gold-glow), 0 0 80px rgba(255, 215, 0, 0.3); }
     }
 
     .intro-family {
@@ -223,18 +151,11 @@
     }
 
     @keyframes hint-fade {
-
-      0%,
-      100% {
-        opacity: 0.3
-      }
-
-      50% {
-        opacity: 1
-      }
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
     }
 
-    /* ─── FIREWORKS CANVAS ─── */
+    /* ─── FIREWORKS ─── */
     #fwCanvas {
       position: fixed;
       inset: 0;
@@ -274,16 +195,10 @@
     }
 
     @keyframes aura-breathe {
-      from {
-        opacity: 0.7;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0.7; }
+      to { opacity: 1; }
     }
 
-    /* Floating petals */
     .petal {
       position: absolute;
       font-size: 20px;
@@ -293,26 +208,12 @@
     }
 
     @keyframes petal-fall {
-      0% {
-        opacity: 0;
-        transform: translateY(-60px) rotate(0deg) translateX(0);
-      }
-
-      10% {
-        opacity: 0.8;
-      }
-
-      90% {
-        opacity: 0.6;
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateY(110vh) rotate(720deg) translateX(var(--drift, 60px));
-      }
+      0% { opacity: 0; transform: translateY(-60px) rotate(0deg) translateX(0); }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.6; }
+      100% { opacity: 0; transform: translateY(110vh) rotate(720deg) translateX(var(--drift, 60px)); }
     }
 
-    /* Arch decoration */
     .hero-arch-svg {
       position: absolute;
       top: 0;
@@ -331,15 +232,8 @@
     }
 
     @keyframes hero-entrance {
-      from {
-        opacity: 0;
-        transform: translateY(60px) scale(0.92);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(60px) scale(0.92); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .sri-badge {
@@ -352,15 +246,13 @@
       padding: 4px 20px;
       border-radius: 50px;
       margin-bottom: 20px;
-      animation: badge-shimmer 3s linear infinite;
       background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.08) 50%, transparent 100%);
       background-size: 200% 100%;
+      animation: badge-shimmer 3s linear infinite;
     }
 
     @keyframes badge-shimmer {
-      to {
-        background-position: -200% 0;
-      }
+      to { background-position: -200% 0; }
     }
 
     .hero-house-icon {
@@ -372,15 +264,8 @@
     }
 
     @keyframes house-float {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(-1deg);
-      }
-
-      50% {
-        transform: translateY(-12px) rotate(1deg);
-      }
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
     }
 
     .hero-title {
@@ -423,15 +308,8 @@
     }
 
     @keyframes dot-pulse {
-
-      0%,
-      100% {
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4)
-      }
-
-      50% {
-        box-shadow: 0 0 0 6px rgba(255, 215, 0, 0)
-      }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(255, 215, 0, 0); }
     }
 
     .hero-family-name {
@@ -447,48 +325,73 @@
       margin-top: 6px;
     }
 
-    .scroll-cue {
+    /* ─── GET DETAILS BUTTON ─── */
+    .get-details-btn {
       position: absolute;
-      bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      color: rgba(255, 215, 0, 0.35);
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      animation: scroll-cue-bob 2.5s ease-in-out infinite;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 32px;
+      background: linear-gradient(135deg, #a07000, #ffd700, #ffaa00);
+      background-size: 200% 100%;
+      color: #1a0e00;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 180, 0, 0.15);
+      animation: btn-glow 2.5s ease-in-out infinite alternate;
+      transition: background-position 0.4s, transform 0.25s, box-shadow 0.25s;
+      white-space: nowrap;
     }
 
-    .scroll-chevron {
+    .get-details-btn:hover {
+      background-position: 100% 0;
+      transform: translateX(-50%) translateY(-3px);
+      box-shadow: 0 10px 36px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 180, 0, 0.25);
+    }
+
+    .get-details-btn:active {
+      transform: translateX(-50%) translateY(0px);
+    }
+
+    @keyframes btn-glow {
+      from { box-shadow: 0 4px 20px rgba(255, 215, 0, 0.25), 0 0 30px rgba(255, 180, 0, 0.1); }
+      to   { box-shadow: 0 4px 32px rgba(255, 215, 0, 0.55), 0 0 60px rgba(255, 180, 0, 0.3); }
+    }
+
+    .btn-arrow {
       font-size: 18px;
-      animation: chevron-drip 1.5s ease-in-out infinite;
+      animation: arrow-bounce 1.5s ease-in-out infinite;
+      display: inline-block;
     }
 
-    @keyframes scroll-cue-bob {
-
-      0%,
-      100% {
-        transform: translateY(0)
-      }
-
-      50% {
-        transform: translateY(6px)
-      }
+    @keyframes arrow-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
     }
 
-    @keyframes chevron-drip {
+    /* ─── STAR FIELD ─── */
+    .star-field { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
 
-      0%,
-      100% {
-        opacity: 0.3
-      }
+    .star {
+      position: absolute;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0;
+      animation: twinkle var(--tw, 4s) var(--td, 0s) infinite ease-in-out;
+    }
 
-      50% {
-        opacity: 1
-      }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: var(--to, 0.6); transform: scale(1); }
     }
 
     /* ─── CONTENT ─── */
@@ -506,10 +409,7 @@
       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .card.visible { opacity: 1; transform: translateY(0); }
 
     .card-inner {
       background: linear-gradient(160deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
@@ -520,13 +420,10 @@
       overflow: hidden;
     }
 
-    /* animated top border gradient */
     .card-inner::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.7) 30%, rgba(255, 180, 0, 1) 50%, rgba(255, 215, 0, 0.7) 70%, transparent 100%);
       background-size: 200% 100%;
@@ -534,16 +431,10 @@
     }
 
     @keyframes border-slide {
-      from {
-        background-position: 200% 0
-      }
-
-      to {
-        background-position: -200% 0
-      }
+      from { background-position: 200% 0; }
+      to { background-position: -200% 0; }
     }
 
-    /* card glow on hover */
     .card:hover .card-inner {
       border-color: rgba(255, 215, 0, 0.4);
       box-shadow: 0 0 40px rgba(255, 180, 0, 0.12), inset 0 0 40px rgba(255, 180, 0, 0.04);
@@ -558,41 +449,11 @@
       pointer-events: none;
     }
 
-    /* corner brackets */
-    .cbr {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      opacity: 0.5;
-    }
-
-    .cbr-tl {
-      top: 12px;
-      left: 12px;
-      border-top: 1.5px solid var(--gold);
-      border-left: 1.5px solid var(--gold);
-    }
-
-    .cbr-tr {
-      top: 12px;
-      right: 12px;
-      border-top: 1.5px solid var(--gold);
-      border-right: 1.5px solid var(--gold);
-    }
-
-    .cbr-bl {
-      bottom: 12px;
-      left: 12px;
-      border-bottom: 1.5px solid var(--gold);
-      border-left: 1.5px solid var(--gold);
-    }
-
-    .cbr-br {
-      bottom: 12px;
-      right: 12px;
-      border-bottom: 1.5px solid var(--gold);
-      border-right: 1.5px solid var(--gold);
-    }
+    .cbr { position: absolute; width: 24px; height: 24px; opacity: 0.5; }
+    .cbr-tl { top: 12px; left: 12px; border-top: 1.5px solid var(--gold); border-left: 1.5px solid var(--gold); }
+    .cbr-tr { top: 12px; right: 12px; border-top: 1.5px solid var(--gold); border-right: 1.5px solid var(--gold); }
+    .cbr-bl { bottom: 12px; left: 12px; border-bottom: 1.5px solid var(--gold); border-left: 1.5px solid var(--gold); }
+    .cbr-br { bottom: 12px; right: 12px; border-bottom: 1.5px solid var(--gold); border-right: 1.5px solid var(--gold); }
 
     .section-label {
       font-size: 9px;
@@ -611,13 +472,8 @@
     }
 
     @keyframes icon-glow {
-      from {
-        filter: drop-shadow(0 0 6px rgba(255, 180, 0, 0.4));
-      }
-
-      to {
-        filter: drop-shadow(0 0 20px rgba(255, 180, 0, 0.8));
-      }
+      from { filter: drop-shadow(0 0 6px rgba(255, 180, 0, 0.4)); }
+      to { filter: drop-shadow(0 0 20px rgba(255, 180, 0, 0.8)); }
     }
 
     .card-heading {
@@ -627,7 +483,6 @@
       margin-bottom: 18px;
     }
 
-    /* ─── WELCOME CARD ─── */
     .welcome-text {
       font-size: 15px;
       line-height: 1.85;
@@ -636,57 +491,7 @@
       z-index: 1;
     }
 
-    /* ─── PHOTO STRIP ─── */
-    .photo-strip {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      padding: 4px 28px;
-      margin: 0 -28px;
-    }
-
-    .photo-strip::-webkit-scrollbar {
-      display: none;
-    }
-
-    .photo-thumb {
-      min-width: 130px;
-      height: 130px;
-      border-radius: 16px;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .photo-thumb::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.5));
-      border-radius: 16px;
-    }
-
-    .photo-thumb:hover {
-      transform: scale(1.06) rotate(-1deg);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.2);
-    }
-
-    .photo-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.9;
-      transition: opacity 0.3s;
-    }
-
-    .photo-thumb:hover img {
-      opacity: 1;
-    }
-
-    /* ─── EVENTS CARD ─── */
+    /* ─── EVENTS ─── */
     .date-badge {
       display: inline-flex;
       align-items: center;
@@ -698,33 +503,12 @@
       margin-bottom: 24px;
     }
 
-    .date-day {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
+    .date-day { font-size: 28px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .date-info { text-align: left; }
+    .date-month { font-size: 12px; color: var(--gold-dark); letter-spacing: 2px; text-transform: uppercase; }
+    .date-dow { font-size: 11px; color: rgba(255, 248, 220, 0.5); }
 
-    .date-info {
-      text-align: left;
-    }
-
-    .date-month {
-      font-size: 12px;
-      color: var(--gold-dark);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .date-dow {
-      font-size: 11px;
-      color: rgba(255, 248, 220, 0.5);
-    }
-
-    .event-list {
-      position: relative;
-      z-index: 1;
-    }
+    .event-list { position: relative; z-index: 1; }
 
     .event-item {
       display: flex;
@@ -736,9 +520,7 @@
       transition: background 0.3s;
     }
 
-    .event-item:last-child {
-      border-bottom: none;
-    }
+    .event-item:last-child { border-bottom: none; }
 
     .event-item:hover {
       background: rgba(255, 215, 0, 0.03);
@@ -758,23 +540,12 @@
       transition: transform 0.3s;
     }
 
-    .event-item:hover .event-pill {
-      transform: scale(1.1) rotate(-5deg);
-    }
+    .event-item:hover .event-pill { transform: scale(1.1) rotate(-5deg); }
 
-    .event-name {
-      color: var(--gold);
-      font-size: 15px;
-      font-weight: 500;
-    }
+    .event-name { color: var(--gold); font-size: 15px; font-weight: 500; }
+    .event-time { color: rgba(255, 248, 220, 0.5); font-size: 12px; margin-top: 2px; }
 
-    .event-time {
-      color: rgba(255, 248, 220, 0.5);
-      font-size: 12px;
-      margin-top: 2px;
-    }
-
-    /* ─── VENUE CARD ─── */
+    /* ─── VENUE ─── */
     .address-banner {
       background: rgba(255, 215, 0, 0.06);
       border: 1px solid rgba(255, 215, 0, 0.15);
@@ -795,24 +566,9 @@
       opacity: 0.06;
     }
 
-    .addr-flat {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--gold);
-    }
-
-    .addr-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--warm);
-      margin: 4px 0;
-    }
-
-    .addr-city {
-      font-size: 12px;
-      color: rgba(255, 248, 220, 0.45);
-      letter-spacing: 2px;
-    }
+    .addr-flat { font-size: 20px; font-weight: 700; color: var(--gold); }
+    .addr-name { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--warm); margin: 4px 0; }
+    .addr-city { font-size: 12px; color: rgba(255, 248, 220, 0.45); letter-spacing: 2px; }
 
     .map-frame {
       border-radius: 16px;
@@ -822,12 +578,7 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
 
-    .map-frame iframe {
-      display: block;
-      width: 100%;
-      height: 220px;
-      border: none;
-    }
+    .map-frame iframe { display: block; width: 100%; height: 220px; border: none; }
 
     .maps-btn {
       display: flex;
@@ -845,6 +596,8 @@
       letter-spacing: 0.5px;
       transition: background-position 0.4s, transform 0.25s, box-shadow 0.25s;
       box-shadow: 0 4px 20px rgba(255, 215, 0, 0.25);
+      position: relative;
+      z-index: 1;
     }
 
     .maps-btn:hover {
@@ -853,7 +606,7 @@
       box-shadow: 0 10px 32px rgba(255, 215, 0, 0.4);
     }
 
-    /* ─── CLOSING CARD ─── */
+    /* ─── CLOSING ─── */
     .closing-inner {
       text-align: center;
       background: linear-gradient(160deg, rgba(255, 215, 0, 0.07) 0%, rgba(255, 140, 0, 0.04) 100%);
@@ -870,85 +623,23 @@
     }
 
     @keyframes om-breathe {
-
-      0%,
-      100% {
-        opacity: 0.6;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.9;
-        transform: scale(1.05);
-      }
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.05); }
     }
 
-    .closing-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      font-style: italic;
-      color: var(--warm);
-      line-height: 1.7;
-    }
-
-    .closing-body {
-      font-size: 14px;
-      color: rgba(255, 248, 220, 0.6);
-      margin-top: 14px;
-      line-height: 1.8;
-    }
-
-    .closing-sig {
-      margin-top: 20px;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-    }
-
-    /* ─── ANIMATED STARS ─── */
-    .star-field {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .star {
-      position: absolute;
-      background: var(--gold);
-      border-radius: 50%;
-      opacity: 0;
-      animation: twinkle var(--tw, 4s) var(--td, 0s) infinite ease-in-out;
-    }
-
-    @keyframes twinkle {
-
-      0%,
-      100% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-
-      50% {
-        opacity: var(--to, 0.6);
-        transform: scale(1);
-      }
-    }
+    .closing-quote { font-family: 'Playfair Display', serif; font-size: 17px; font-style: italic; color: var(--warm); line-height: 1.7; }
+    .closing-body { font-size: 14px; color: rgba(255, 248, 220, 0.6); margin-top: 14px; line-height: 1.8; }
+    .closing-sig { margin-top: 20px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); }
   </style>
 </head>
 
 <body>
 
-  <!-- BG Canvas (mandala) -->
   <canvas id="bgCanvas"></canvas>
-  <!-- Fireworks Canvas -->
   <canvas id="fwCanvas"></canvas>
-  <!-- Star field -->
   <div class="star-field" id="starField"></div>
 
-  <!-- ═══════════════ INTRO ═══════════════ -->
+  <!-- ═══ INTRO ═══ -->
   <div id="intro" onclick="enterSite()">
     <div class="intro-ring ring1"></div>
     <div class="intro-ring ring2"></div>
@@ -956,40 +647,40 @@
     <div class="intro-ring ring4"></div>
 
     <svg class="intro-mandala" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="200" cy="200" r="180" stroke="#ffd700" stroke-width="0.5" />
-      <circle cx="200" cy="200" r="150" stroke="#ffd700" stroke-width="0.5" />
-      <circle cx="200" cy="200" r="120" stroke="#ffd700" stroke-width="0.5" />
-      <circle cx="200" cy="200" r="80" stroke="#ffd700" stroke-width="0.5" />
-      <circle cx="200" cy="200" r="40" stroke="#ffd700" stroke-width="0.8" />
+      <circle cx="200" cy="200" r="180" stroke="#ffd700" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="150" stroke="#ffd700" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="120" stroke="#ffd700" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="80"  stroke="#ffd700" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="40"  stroke="#ffd700" stroke-width="0.8"/>
       <g stroke="#ffd700" stroke-width="0.5">
-        <line x1="200" y1="20" x2="200" y2="380" />
-        <line x1="20" y1="200" x2="380" y2="200" />
-        <line x1="73" y1="73" x2="327" y2="327" />
-        <line x1="327" y1="73" x2="73" y2="327" />
-        <line x1="20" y1="127" x2="380" y2="273" />
-        <line x1="127" y1="20" x2="273" y2="380" />
-        <line x1="380" y1="127" x2="20" y2="273" />
-        <line x1="273" y1="20" x2="127" y2="380" />
+        <line x1="200" y1="20" x2="200" y2="380"/>
+        <line x1="20"  y1="200" x2="380" y2="200"/>
+        <line x1="73"  y1="73"  x2="327" y2="327"/>
+        <line x1="327" y1="73"  x2="73"  y2="327"/>
+        <line x1="20"  y1="127" x2="380" y2="273"/>
+        <line x1="127" y1="20"  x2="273" y2="380"/>
+        <line x1="380" y1="127" x2="20"  y2="273"/>
+        <line x1="273" y1="20"  x2="127" y2="380"/>
       </g>
       <g fill="#ffd700" opacity="0.8">
-        <circle cx="200" cy="20" r="3" />
-        <circle cx="200" cy="380" r="3" />
-        <circle cx="20" cy="200" r="3" />
-        <circle cx="380" cy="200" r="3" />
-        <circle cx="73" cy="73" r="3" />
-        <circle cx="327" cy="327" r="3" />
-        <circle cx="327" cy="73" r="3" />
-        <circle cx="73" cy="327" r="3" />
+        <circle cx="200" cy="20"  r="3"/>
+        <circle cx="200" cy="380" r="3"/>
+        <circle cx="20"  cy="200" r="3"/>
+        <circle cx="380" cy="200" r="3"/>
+        <circle cx="73"  cy="73"  r="3"/>
+        <circle cx="327" cy="327" r="3"/>
+        <circle cx="327" cy="73"  r="3"/>
+        <circle cx="73"  cy="327" r="3"/>
       </g>
       <g fill="none" stroke="#ff8c00" stroke-width="0.5" opacity="0.5">
-        <path d="M200,50 Q230,100 200,130 Q170,100 200,50Z" />
-        <path d="M200,350 Q230,300 200,270 Q170,300 200,350Z" />
-        <path d="M50,200 Q100,230 130,200 Q100,170 50,200Z" />
-        <path d="M350,200 Q300,230 270,200 Q300,170 350,200Z" />
-        <path d="M88,88  Q120,130 150,100 Q130,70 88,88Z" />
-        <path d="M312,88  Q280,130 250,100 Q270,70 312,88Z" />
-        <path d="M88,312 Q120,270 150,300 Q130,330 88,312Z" />
-        <path d="M312,312 Q280,270 250,300 Q270,330 312,312Z" />
+        <path d="M200,50 Q230,100 200,130 Q170,100 200,50Z"/>
+        <path d="M200,350 Q230,300 200,270 Q170,300 200,350Z"/>
+        <path d="M50,200 Q100,230 130,200 Q100,170 50,200Z"/>
+        <path d="M350,200 Q300,230 270,200 Q300,170 350,200Z"/>
+        <path d="M88,88   Q120,130 150,100 Q130,70  88,88Z"/>
+        <path d="M312,88  Q280,130 250,100 Q270,70  312,88Z"/>
+        <path d="M88,312  Q120,270 150,300 Q130,330 88,312Z"/>
+        <path d="M312,312 Q280,270 250,300 Q270,330 312,312Z"/>
       </g>
     </svg>
 
@@ -1003,45 +694,39 @@
     </div>
   </div>
 
-  <!-- ═══════════════ MAIN ═══════════════ -->
+  <!-- ═══ MAIN ═══ -->
   <div id="main">
 
-    <!-- ── HERO ── -->
+    <!-- HERO -->
     <div class="hero">
       <div class="hero-aura"></div>
-
-      <!-- Floating petals -->
       <div id="petals"></div>
 
-      <!-- Arch SVG -->
-      <svg class="hero-arch-svg" viewBox="0 0 600 350" fill="none" xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <ellipse cx="300" cy="10" rx="260" ry="290" stroke="#ffd700" stroke-width="0.6" opacity="0.25" />
-        <ellipse cx="300" cy="10" rx="230" ry="260" stroke="#ffd700" stroke-width="0.4" opacity="0.15" />
-        <path d="M40,10 Q300,-80 560,10" stroke="#ffd700" stroke-width="0.8" opacity="0.35" />
-        <path d="M80,10 Q300,-60 520,10" stroke="#ff8c00" stroke-width="0.5" opacity="0.2" />
-        <!-- hanging gems -->
+      <svg class="hero-arch-svg" viewBox="0 0 600 350" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="300" cy="10" rx="260" ry="290" stroke="#ffd700" stroke-width="0.6" opacity="0.25"/>
+        <ellipse cx="300" cy="10" rx="230" ry="260" stroke="#ffd700" stroke-width="0.4" opacity="0.15"/>
+        <path d="M40,10 Q300,-80 560,10" stroke="#ffd700" stroke-width="0.8" opacity="0.35"/>
+        <path d="M80,10 Q300,-60 520,10" stroke="#ff8c00" stroke-width="0.5" opacity="0.2"/>
         <g opacity="0.7">
-          <circle cx="300" cy="-12" r="5" fill="#ffd700" />
-          <circle cx="272" cy="-4" r="3.5" fill="#ff8c00" />
-          <circle cx="328" cy="-4" r="3.5" fill="#ff8c00" />
-          <circle cx="245" cy="8" r="3" fill="#ffd700" />
-          <circle cx="355" cy="8" r="3" fill="#ffd700" />
-          <circle cx="218" cy="22" r="2.5" fill="#ff8c00" />
-          <circle cx="382" cy="22" r="2.5" fill="#ff8c00" />
+          <circle cx="300" cy="-12" r="5" fill="#ffd700"/>
+          <circle cx="272" cy="-4"  r="3.5" fill="#ff8c00"/>
+          <circle cx="328" cy="-4"  r="3.5" fill="#ff8c00"/>
+          <circle cx="245" cy="8"   r="3" fill="#ffd700"/>
+          <circle cx="355" cy="8"   r="3" fill="#ffd700"/>
+          <circle cx="218" cy="22"  r="2.5" fill="#ff8c00"/>
+          <circle cx="382" cy="22"  r="2.5" fill="#ff8c00"/>
         </g>
-        <!-- garland dots left -->
         <g fill="#ff8c00" opacity="0.5">
-          <circle cx="85" cy="50" r="4" />
-          <circle cx="68" cy="90" r="5" />
-          <circle cx="55" cy="130" r="4" />
-          <circle cx="45" cy="170" r="5" />
-          <circle cx="38" cy="210" r="4" />
-          <circle cx="515" cy="50" r="4" />
-          <circle cx="532" cy="90" r="5" />
-          <circle cx="545" cy="130" r="4" />
-          <circle cx="555" cy="170" r="5" />
-          <circle cx="562" cy="210" r="4" />
+          <circle cx="85"  cy="50"  r="4"/>
+          <circle cx="68"  cy="90"  r="5"/>
+          <circle cx="55"  cy="130" r="4"/>
+          <circle cx="45"  cy="170" r="5"/>
+          <circle cx="38"  cy="210" r="4"/>
+          <circle cx="515" cy="50"  r="4"/>
+          <circle cx="532" cy="90"  r="5"/>
+          <circle cx="545" cy="130" r="4"/>
+          <circle cx="555" cy="170" r="5"/>
+          <circle cx="562" cy="210" r="4"/>
         </g>
       </svg>
 
@@ -1057,27 +742,25 @@
           <div class="orn-dot"></div>
           <div class="orn-line"></div>
         </div>
-        <p class="hero-family-name">M. Kiran Kumar & M. Swathi</p>
+        <p class="hero-family-name">M. Kiran Kumar &amp; M. Swathi</p>
         <p class="hero-invite-text">cordially invites you &amp; your family</p>
       </div>
 
-      <div class="scroll-cue">
-        <span class="scroll-chevron">⌄</span>
-        <span>scroll</span>
-      </div>
+      <!-- GET DETAILS BUTTON (replaces scroll cue) -->
+      <button class="get-details-btn" onclick="scrollToDetails()">
+        Get Details &nbsp;<span class="btn-arrow">↓</span>
+      </button>
     </div>
 
-    <!-- ── CONTENT ── -->
-    <div class="content-section">
+    <!-- CONTENT -->
+    <div class="content-section" id="details-section">
 
       <!-- Welcome -->
       <div class="card" id="c1">
         <div class="card-inner">
           <div class="card-bg-tex"></div>
-          <div class="cbr cbr-tl"></div>
-          <div class="cbr cbr-tr"></div>
-          <div class="cbr cbr-bl"></div>
-          <div class="cbr cbr-br"></div>
+          <div class="cbr cbr-tl"></div><div class="cbr cbr-tr"></div>
+          <div class="cbr cbr-bl"></div><div class="cbr cbr-br"></div>
           <p class="section-label">With Blessings of My Late Father Naga Mukteshwara Rao</p>
           <p class="welcome-text">
             With humble hearts and grateful souls, we invite you to grace us with your presence as we step into our new
@@ -1085,7 +768,6 @@
           </p>
         </div>
       </div>
-
 
       <!-- Date & Events -->
       <div class="card" id="c3">
@@ -1144,8 +826,8 @@
             <div class="addr-city">Hyderabad, TG</div>
           </div>
           <div class="map-frame">
-            <iframe src="https://www.google.com/maps?q=Param+Heights&output=embed" allowfullscreen="" loading="lazy"
-              title="Venue map">
+            <iframe src="https://www.google.com/maps?q=Param+Heights+Hyderabad&output=embed"
+              allowfullscreen="" loading="lazy" title="Venue map">
             </iframe>
           </div>
           <a class="maps-btn" href="https://maps.app.goo.gl/YXcTM3k7DXM5UXDU6?g_st=iw" target="_blank">
@@ -1157,15 +839,11 @@
       <!-- Closing -->
       <div class="card" id="c5">
         <div class="card-inner closing-inner">
-          <div class="cbr cbr-tl"></div>
-          <div class="cbr cbr-tr"></div>
-          <div class="cbr cbr-bl"></div>
-          <div class="cbr cbr-br"></div>
+          <div class="cbr cbr-tl"></div><div class="cbr cbr-tr"></div>
+          <div class="cbr cbr-bl"></div><div class="cbr cbr-br"></div>
           <span class="om-glyph">ॐ</span>
           <p class="closing-quote">"A home is built with love, laughter<br>and the blessings of all who enter it."</p>
-          <p class="closing-body">
-            We truly look forward to your presence and blessings on this joyous occasion. 🙏
-          </p>
+          <p class="closing-body">We truly look forward to your presence and blessings on this joyous occasion. 🙏</p>
           <div class="ornament-row" style="margin:20px 0 16px;">
             <div class="orn-line"></div>
             <div class="orn-dot"></div>
@@ -1186,7 +864,7 @@
         const s = document.createElement('div');
         s.className = 'star';
         const sz = 1 + Math.random() * 2;
-        s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random() * 100}%;top:${Math.random() * 100}%;--to:${0.3 + Math.random() * 0.6};--tw:${3 + Math.random() * 5}s;--td:${Math.random() * 6}s`;
+        s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--to:${0.3+Math.random()*0.6};--tw:${3+Math.random()*5}s;--td:${Math.random()*6}s`;
         sf.appendChild(s);
       }
     })();
@@ -1198,7 +876,7 @@
         const p = document.createElement('div');
         p.className = 'spark';
         const sz = (1 + Math.random() * 3) + 'px';
-        p.style.cssText = `width:${sz};height:${sz};left:${Math.random() * 100}%;top:${40 + Math.random() * 45}%;--dur:${2 + Math.random() * 3}s;--delay:${Math.random() * 4}s`;
+        p.style.cssText = `width:${sz};height:${sz};left:${Math.random()*100}%;top:${40+Math.random()*45}%;--dur:${2+Math.random()*3}s;--delay:${Math.random()*4}s`;
         c.appendChild(p);
       }
     })();
@@ -1208,10 +886,7 @@
       const cv = document.getElementById('bgCanvas');
       const ctx = cv.getContext('2d');
       let W, H, t = 0;
-      function resize() {
-        W = cv.width = window.innerWidth;
-        H = cv.height = window.innerHeight;
-      }
+      function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
       resize();
       window.addEventListener('resize', resize);
 
@@ -1221,8 +896,8 @@
         ctx.rotate(angle);
         ctx.beginPath();
         ctx.moveTo(0, 0);
-        ctx.bezierCurveTo(len * 0.4, -len * 0.3, len * 0.8, -len * 0.2, len, 0);
-        ctx.bezierCurveTo(len * 0.8, len * 0.2, len * 0.4, len * 0.3, 0, 0);
+        ctx.bezierCurveTo(len*0.4, -len*0.3, len*0.8, -len*0.2, len, 0);
+        ctx.bezierCurveTo(len*0.8, len*0.2, len*0.4, len*0.3, 0, 0);
         ctx.fillStyle = col;
         ctx.fill();
         ctx.restore();
@@ -1230,13 +905,13 @@
 
       function loop() {
         ctx.clearRect(0, 0, W, H);
-        const cx = W / 2, cy = H / 2;
+        const cx = W/2, cy = H/2;
         const maxR = Math.min(W, H) * 0.42;
         const rings = [
-          { r: maxR * 0.25, petals: 8, col: 'rgba(255,215,0,0.06)', len: maxR * 0.12 },
-          { r: maxR * 0.5, petals: 12, col: 'rgba(255,140,0,0.05)', len: maxR * 0.14 },
-          { r: maxR * 0.75, petals: 16, col: 'rgba(255,215,0,0.04)', len: maxR * 0.12 },
-          { r: maxR, petals: 24, col: 'rgba(255,180,0,0.03)', len: maxR * 0.10 },
+          { r: maxR*0.25, petals: 8,  col: 'rgba(255,215,0,0.06)', len: maxR*0.12 },
+          { r: maxR*0.5,  petals: 12, col: 'rgba(255,140,0,0.05)', len: maxR*0.14 },
+          { r: maxR*0.75, petals: 16, col: 'rgba(255,215,0,0.04)', len: maxR*0.12 },
+          { r: maxR,      petals: 24, col: 'rgba(255,180,0,0.03)', len: maxR*0.10 },
         ];
         rings.forEach((ring, ri) => {
           for (let i = 0; i < ring.petals; i++) {
@@ -1246,11 +921,10 @@
             drawPetal(px, py, ang, ring.len, ring.col);
           }
         });
-        // concentric rings
         [0.28, 0.5, 0.72, 0.95].forEach((f, i) => {
           ctx.beginPath();
           ctx.arc(cx, cy, maxR * f, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(255,215,0,${0.04 - i * 0.008})`;
+          ctx.strokeStyle = `rgba(255,215,0,${0.04 - i*0.008})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         });
@@ -1268,13 +942,7 @@
         const p = document.createElement('div');
         p.className = 'petal';
         p.textContent = emojis[i % emojis.length];
-        p.style.cssText = `
-      left:${Math.random() * 100}%;
-      --pd:${7 + Math.random() * 8}s;
-      --delay:${-Math.random() * 12}s;
-      --drift:${(Math.random() - 0.5) * 120}px;
-      font-size:${14 + Math.random() * 12}px;
-    `;
+        p.style.cssText = `left:${Math.random()*100}%;--pd:${7+Math.random()*8}s;--delay:${-Math.random()*12}s;--drift:${(Math.random()-0.5)*120}px;font-size:${14+Math.random()*12}px;`;
         container.appendChild(p);
       }
     })();
@@ -1288,53 +956,38 @@
     window.addEventListener('resize', fwResize);
 
     let particles = [], fwActive = false;
-    const cols = ['#ffd700', '#ff8c00', '#ffaa00', '#ff6600', '#ffe066', '#ff4500', '#ffd700'];
+    const cols = ['#ffd700','#ff8c00','#ffaa00','#ff6600','#ffe066','#ff4500','#ffd700'];
 
     function launchFirework(x, y) {
       const n = 60 + Math.floor(Math.random() * 40);
       for (let i = 0; i < n; i++) {
         const ang = Math.random() * Math.PI * 2;
         const spd = 2 + Math.random() * 6;
-        particles.push({
-          x, y,
-          vx: Math.cos(ang) * spd,
-          vy: Math.sin(ang) * spd,
-          life: 1,
-          decay: 0.015 + Math.random() * 0.02,
-          size: 2 + Math.random() * 3,
-          col: cols[Math.floor(Math.random() * cols.length)],
-          trail: []
-        });
+        particles.push({ x, y, vx: Math.cos(ang)*spd, vy: Math.sin(ang)*spd, life: 1, decay: 0.015+Math.random()*0.02, size: 2+Math.random()*3, col: cols[Math.floor(Math.random()*cols.length)], trail: [] });
       }
     }
 
     function fwLoop() {
-      if (!fwActive) { return; }
+      if (!fwActive) return;
       fwCtx.clearRect(0, 0, fwW, fwH);
       fwCtx.fillStyle = 'rgba(10,4,0,0.18)';
       fwCtx.fillRect(0, 0, fwW, fwH);
-
       particles = particles.filter(p => p.life > 0.01);
       particles.forEach(p => {
         p.trail.push({ x: p.x, y: p.y, life: p.life });
         if (p.trail.length > 6) p.trail.shift();
-
         p.x += p.vx; p.y += p.vy;
-        p.vy += 0.06;
-        p.vx *= 0.98;
+        p.vy += 0.06; p.vx *= 0.98;
         p.life -= p.decay;
-
-        // trail
         p.trail.forEach((pt, ti) => {
           fwCtx.beginPath();
-          fwCtx.arc(pt.x, pt.y, p.size * (ti / p.trail.length) * 0.6, 0, Math.PI * 2);
+          fwCtx.arc(pt.x, pt.y, p.size*(ti/p.trail.length)*0.6, 0, Math.PI*2);
           fwCtx.fillStyle = p.col;
-          fwCtx.globalAlpha = pt.life * (ti / p.trail.length) * 0.4;
+          fwCtx.globalAlpha = pt.life*(ti/p.trail.length)*0.4;
           fwCtx.fill();
         });
-
         fwCtx.beginPath();
-        fwCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        fwCtx.arc(p.x, p.y, p.size, 0, Math.PI*2);
         fwCtx.fillStyle = p.col;
         fwCtx.globalAlpha = p.life;
         fwCtx.shadowBlur = 8;
@@ -1343,7 +996,6 @@
         fwCtx.globalAlpha = 1;
         fwCtx.shadowBlur = 0;
       });
-
       requestAnimationFrame(fwLoop);
     }
 
@@ -1353,11 +1005,11 @@
       fwLoop();
       let shots = 0;
       const burst = () => {
-        const x = fwW * 0.2 + Math.random() * fwW * 0.6;
-        const y = fwH * 0.1 + Math.random() * fwH * 0.4;
+        const x = fwW*0.2 + Math.random()*fwW*0.6;
+        const y = fwH*0.1 + Math.random()*fwH*0.4;
         launchFirework(x, y);
         shots++;
-        if (shots < 10) setTimeout(burst, 180 + Math.random() * 300);
+        if (shots < 10) setTimeout(burst, 180 + Math.random()*300);
         else setTimeout(() => { fwCv.style.display = 'none'; fwActive = false; }, 3000);
       };
       burst();
@@ -1378,20 +1030,21 @@
       }, 900);
     }
 
+    /* ─── SCROLL TO DETAILS ─── */
+    function scrollToDetails() {
+      document.getElementById('details-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
     /* ─── SCROLL REVEAL ─── */
     function setupReveal() {
       const cards = document.querySelectorAll('.card');
-      // first two immediately
       setTimeout(() => cards[0]?.classList.add('visible'), 300);
       setTimeout(() => cards[1]?.classList.add('visible'), 600);
-
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
       }, { threshold: 0.12 });
-
       cards.forEach(c => io.observe(c));
     }
   </script>
 </body>
-
 </html>
